@@ -49,11 +49,6 @@ abstract Flyable
 +registerTower(WeatherTower* p_tower)
 }
 
-interface Subscriber
-{
-+void updateConditions()
-}
-
 class Helicopter
 {
 +Helicopter(long p_id, string p_name, Coordinates p_coordinate)
@@ -99,13 +94,9 @@ Flyable <|.. Aircraft
 Aircraft <|-- Helicopter
 Aircraft <|-- JetPlane
 Aircraft <|-- Baloon
-Subscriber <|.. Aircraft
-Subscriber <|.. Helicopter
-Subscriber <|.. JetPlane
-Subscriber <|.. Baloon
 AircraftFactory <|-- HelicopterFactory
 AircraftFactory <|-- JetPlaneFactory
-AircraftFactory <|-- BalonFactory
+AircraftFactory <|-- BaloonFactory
 
 JetPlane -[hidden]- AircraftFactory
 WeatherTower -[hidden]- WeatherProvider
