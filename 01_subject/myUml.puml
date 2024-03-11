@@ -82,7 +82,7 @@ class JetPlaneFactory
 +Flyable* createJetPlane(string p_name, Coordinates p_coordinates)
 }
 
-class BalonFactory
+class BaloonFactory
 {
 +Flyable* createBaloon(string p_name, Coordinates p_coordinates)
 }
