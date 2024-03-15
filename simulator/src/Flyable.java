@@ -1,7 +1,3 @@
-package aircrafts;
-
-import towers.WheatherTower;
-
 public abstract class Flyable {
     protected WheatherTower wheatherTower;
 

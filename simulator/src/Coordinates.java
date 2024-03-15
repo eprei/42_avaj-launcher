@@ -1,5 +1,3 @@
-package aircrafts;
-
 public class Coordinates {
     private int longitude;
     private int latitude;
@@ -27,9 +25,11 @@ public class Coordinates {
         if (height == 0) {
             return;
         }
+        System.out.printf("old coordinates: %d %d %d\n", longitude, latitude, height);
         updateLongitude(longitudeVariation);
         updateLatitude(latitudeVariation);
         updateHeight(heightVariation);
+        System.out.printf("new coordinates: %d %d %d\n", longitude, latitude, height);
     }
 
     private void updateLongitude(int variation) {

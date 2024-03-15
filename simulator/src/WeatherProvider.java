@@ -1,15 +1,11 @@
-package weather;
-
-import aircrafts.Coordinates;
-
 public class WeatherProvider {
+    private static final String[] weather = {
+            Weather.SUN,
+            Weather.RAIN,
+            Weather.FOG,
+            Weather.SNOW};
     private static WeatherProvider instance;
     private static int changeWeather = 0;
-
-    private final String[] weather = {Weather.TYPES.get(0),
-            Weather.TYPES.get(1),
-            Weather.TYPES.get(2),
-            Weather.TYPES.get(3)};
 
     private WeatherProvider() {
     }
@@ -22,13 +18,17 @@ public class WeatherProvider {
     }
 
     public static void changeWeather() {
+        System.out.printf("changing weather from %s to ", weather[changeWeather % 4]);
         changeWeather += 1;
+        System.out.printf("%s\n", weather[changeWeather % 4]);
     }
 
     public String getCurrentWeather(Coordinates p_coordinates) {
+//        TODO activate next line to calculate dynamically the weather
 //        int randomSeed = (p_coordinates.getLongitude() + p_coordinates.getLatitude() +
 //                p_coordinates.getHeight() + changeWeather) % 4;
         int randomSeed = changeWeather % 4;
+//        TODO delete next line, its just to test weather temporally
         System.out.printf("WeatherProvider: weather at %d %d %d is %s\n", p_coordinates.getLongitude(), p_coordinates.getLatitude(),
                 p_coordinates.getHeight(), weather[randomSeed]);
         return weather[randomSeed];

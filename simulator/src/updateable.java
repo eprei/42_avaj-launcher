@@ -1,5 +1,3 @@
-package aircrafts;
-
 public interface updateable {
     private void updateCoordinatesForSun() {
     }

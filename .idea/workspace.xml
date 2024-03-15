@@ -5,25 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61bc8b77-07a5-4d9a-9e84-ef155ed8b62c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/simulator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/aircrafts/AircraftTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/aircrafts/Balloon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/aircrafts/Coordinates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/aircrafts/Helicopter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/aircrafts/JetPlane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/aircrafts/updateable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/factories/AircraftFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/factories/BalloonFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/factories/HelicopterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/factories/JetPlaneFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/simulator/Simulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/towers/Tower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/towers/WheatherTower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/weather/Weather.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/weather/WeatherProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulator/src/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/Aircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/AircraftTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/AircraftTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/Balloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/Balloon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/Flyable.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/Flyable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/Helicopter.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/Helicopter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/JetPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/JetPlane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/updateable.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/updateable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/factories/AircraftFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/AircraftFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/factories/BalloonFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/factories/HelicopterFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/factories/JetPlaneFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/simulator/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/Simulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/towers/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/Tower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/towers/WheatherTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/WheatherTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/weather/Weather.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/Weather.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/weather/WeatherProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/WeatherProvider.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +35,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,26 +78,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Simulator.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "20",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Emiliano/avaj-launcher",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Simulator.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/epresa-c/avaj-launcher&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/simulator/src/simulator" />
       <recent name="$PROJECT_DIR$/com.simulator.aircrafts/src" />
       <recent name="$PROJECT_DIR$/com.simulator.aircrafts" />
     </key>
@@ -108,11 +114,11 @@
   </component>
   <component name="RunManager">
     <configuration name="Simulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="simulator.Simulator" />
+      <option name="MAIN_CLASS_NAME" value="Simulator" />
       <module name="simulator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="simulator.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,5 +160,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/simulator/src/Tower.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/simulator/src/Tower.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

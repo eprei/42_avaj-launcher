@@ -1,11 +1,5 @@
-package towers;
-
-import aircrafts.Coordinates;
-import weather.WeatherProvider;
-
 public class WheatherTower extends Tower {
     private final WeatherProvider weatherProvider;
-    private final String NAME = "WeatherTower";
 
     public WheatherTower() {
         this.weatherProvider = WeatherProvider.getInstance();
@@ -16,13 +10,8 @@ public class WheatherTower extends Tower {
     }
 
     public void changeWeather() {
-        System.out.println("changing the weather...");
+        System.out.println("WeatherTower changeWeather()");
         WeatherProvider.changeWeather();
-        super.conditionChanged();
+        conditionChanged();
     }
-
-    public String getName() {
-        return this.NAME;
-    }
-
 }
