@@ -1,6 +1,6 @@
 package aircrafts;
 
-import notifications.Messages;
+import logger.Messages;
 import towers.Coordinates;
 import weather.Weather;
 
@@ -24,7 +24,7 @@ public class Helicopter extends Aircraft {
             case Weather.FOG -> coordinates.updateCoordinates(1, 0, 0);
             case Weather.SNOW -> coordinates.updateCoordinates(0, 0, -12);
         }
-        printMessage(AircraftTypes.HELICOPTER, NAME, ID, Messages.helicopter.get(weather));
+        logMessage(AircraftTypes.HELICOPTER, NAME, ID, Messages.helicopter.get(weather));
         hasTheAircraftLanded(TYPE);
     }
 

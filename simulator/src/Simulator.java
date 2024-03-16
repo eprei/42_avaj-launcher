@@ -1,12 +1,20 @@
 import aircrafts.AircraftFactory;
 import aircrafts.AircraftTypes;
 import aircrafts.Flyable;
+import logger.Log;
 import towers.Coordinates;
 import towers.WeatherTower;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Simulator {
+    // TODO continue here
+    private final List<Flyable> listOfFlyables = new ArrayList<>();
+
     public static void main(String[] args) {
         simulate();
+        Log.saveLogToFile();
     }
 
     private static void simulate() {
@@ -20,7 +28,7 @@ public class Simulator {
         for (int i = 1; i <= 5; i++) {
             System.out.printf("___________   ITERATION %d   _____________\n", i);
             weatherTower.changeWeather();
-            wait(1000);
+//            wait(1000);
         }
     }
 

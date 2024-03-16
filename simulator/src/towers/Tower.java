@@ -2,7 +2,7 @@ package towers;
 
 import aircrafts.Aircraft;
 import aircrafts.Flyable;
-import notifications.Messages;
+import logger.Messages;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ public class Tower {
         Aircraft aircraft = (Aircraft) p_flyable;
         TO_UNREGISTER.add(p_flyable);
         System.out.printf("Tower says: %s#%s(%d) %s %s.\n", aircraft.getType(),
-                aircraft.getName(), aircraft.getId(), notifications.Messages.UNREGISTERED, this.NAME);
+                aircraft.getName(), aircraft.getId(), logger.Messages.UNREGISTERED, this.NAME);
     }
 
     public String getName() {

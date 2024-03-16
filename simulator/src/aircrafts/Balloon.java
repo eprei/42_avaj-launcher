@@ -1,6 +1,6 @@
 package aircrafts;
 
-import notifications.Messages;
+import logger.Messages;
 import towers.Coordinates;
 import weather.Weather;
 
@@ -24,7 +24,7 @@ public class Balloon extends Aircraft {
             case Weather.FOG -> coordinates.updateCoordinates(0, 0, -3);
             case Weather.SNOW -> coordinates.updateCoordinates(0, 0, -15);
         }
-        printMessage(AircraftTypes.BALLOON, NAME, ID, Messages.balloon.get(weather));
+        logMessage(AircraftTypes.BALLOON, NAME, ID, Messages.balloon.get(weather));
         hasTheAircraftLanded(TYPE);
     }
 }

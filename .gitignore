@@ -10,3 +10,5 @@
 *.class
 #sources files
 sources.txt
+#resulting simulation file
+simulation.txt

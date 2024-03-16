@@ -1,6 +1,6 @@
 package aircrafts;
 
-import notifications.Messages;
+import logger.Messages;
 import towers.Coordinates;
 import weather.Weather;
 
@@ -24,7 +24,7 @@ public class JetPlane extends Aircraft {
             case Weather.FOG -> coordinates.updateCoordinates(0, 1, 0);
             case Weather.SNOW -> coordinates.updateCoordinates(0, 0, -7);
         }
-        printMessage(AircraftTypes.JETPLANE, NAME, ID, Messages.jetPlane.get(weather));
+        logMessage(AircraftTypes.JETPLANE, NAME, ID, Messages.jetPlane.get(weather));
         hasTheAircraftLanded(TYPE);
     }
 }

@@ -8,24 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61bc8b77-07a5-4d9a-9e84-ef155ed8b62c" name="Changes" comment="All aircraft working">
-      <change afterPath="$PROJECT_DIR$/simulator/src/aircrafts/AircraftTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulator/src/logger/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/Aircraft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/AircraftFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/AircraftFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/AircraftTypes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/Balloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/Balloon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/towers/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/Flyable.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/Flyable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/Helicopter.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/Helicopter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/JetPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/JetPlane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/notifications/Messages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulator/src/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/Simulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/towers/Tower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/Weather.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/weather/Weather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/WeatherProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/weather/WeatherProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/WheatherTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/towers/WeatherTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/src/updateable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/Aircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/AircraftFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/AircraftFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/Balloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/Balloon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/Helicopter.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/Helicopter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/aircrafts/JetPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/aircrafts/JetPlane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/notifications/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/logger/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/towers/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/towers/Tower.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,26 +76,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Simulator.executor": "Run",
-    "Application.simulator.src.Simulator.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "20",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/epresa-c/avaj-launcher",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "rearrange.code.on.save": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Simulator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.simulator.src.Simulator.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/epresa-c/avaj-launcher&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -157,6 +150,7 @@
     <attachedChunks>
       <set>
         <option value="jdk-20.0.2-azul-20.0.2-4caba194b151-895bf479" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
       </set>
     </attachedChunks>
   </component>
@@ -169,6 +163,23 @@
       <option name="presentableId" value="Default" />
       <updated>1710181906189</updated>
     </task>
+    <task id="LOCAL-00001" summary="All aircraft working">
+      <option name="closed" value="true" />
+      <created>1710603102963</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710603102963</updated>
+    </task>
+    <task id="LOCAL-00002" summary="All aircraft working">
+      <option name="closed" value="true" />
+      <created>1710603128640</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710603128640</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

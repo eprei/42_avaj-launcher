@@ -1,4 +1,4 @@
-package notifications;
+package logger;
 
 import weather.Weather;
 
