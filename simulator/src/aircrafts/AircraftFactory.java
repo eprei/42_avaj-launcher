@@ -1,3 +1,7 @@
+package aircrafts;
+
+import towers.Coordinates;
+
 public class AircraftFactory {
     private static int uuid = 1;
     private static AircraftFactory instance;

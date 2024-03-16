@@ -1,7 +1,12 @@
-public class WheatherTower extends Tower {
+package towers;
+
+import weather.WeatherProvider;
+
+public class WeatherTower extends Tower {
     private final WeatherProvider weatherProvider;
 
-    public WheatherTower() {
+    public WeatherTower() {
+        super("weather tower");
         this.weatherProvider = WeatherProvider.getInstance();
     }
 

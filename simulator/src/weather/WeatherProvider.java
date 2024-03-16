@@ -1,11 +1,17 @@
+package weather;
+
+import towers.Coordinates;
+
 public class WeatherProvider {
     private static final String[] weather = {
             Weather.SUN,
             Weather.RAIN,
             Weather.FOG,
-            Weather.SNOW};
+            Weather.SNOW
+    };
     private static WeatherProvider instance;
     private static int changeWeather = 0;
+    private final String NAME = "WeatherProvider";
 
     private WeatherProvider() {
     }
@@ -29,7 +35,7 @@ public class WeatherProvider {
 //                p_coordinates.getHeight() + changeWeather) % 4;
         int randomSeed = changeWeather % 4;
 //        TODO delete next line, its just to test weather temporally
-        System.out.printf("WeatherProvider: weather at %d %d %d is %s\n", p_coordinates.getLongitude(), p_coordinates.getLatitude(),
+        System.out.printf("%s: weather at %d %d %d: %s\n", this.NAME, p_coordinates.getLongitude(), p_coordinates.getLatitude(),
                 p_coordinates.getHeight(), weather[randomSeed]);
         return weather[randomSeed];
     }

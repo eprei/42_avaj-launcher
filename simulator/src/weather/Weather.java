@@ -1,3 +1,5 @@
+package weather;
+
 public class Weather {
     public static final String SUN = "sun";
     public static final String RAIN = "rain";
