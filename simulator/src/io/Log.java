@@ -1,4 +1,4 @@
-package logger;
+package io;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -18,5 +18,6 @@ public class Log {
         } catch (IOException e) {
             System.out.printf("An error occurred while saving the file %s: %s", FILE_NAME, e);
         }
+        // TODO throw exception to catch in Simulator
     }
 }

@@ -1,6 +1,6 @@
 package aircrafts;
 
-import logger.Log;
+import io.Log;
 import towers.Coordinates;
 
 public class Aircraft extends Flyable {

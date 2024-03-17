@@ -1,6 +1,6 @@
 package aircrafts;
 
-import logger.Messages;
+import io.Messages;
 import towers.Coordinates;
 import weather.Weather;
 

@@ -14,9 +14,12 @@ public class WeatherTower extends Tower {
         return this.weatherProvider.getCurrentWeather(p_coordinates);
     }
 
-    public void changeWeather() {
-        System.out.println("WeatherTower changeWeather()");
-        WeatherProvider.changeWeather();
-        conditionChanged();
+    public void changeWeather(int numberOfTimes) {
+        for (int i = 0; i <= numberOfTimes; i++) {
+            System.out.printf("___________   ITERATION %d   _____________\n", i);
+            System.out.println("WeatherTower changeWeather()");
+            WeatherProvider.changeWeather();
+            conditionChanged();
+        }
     }
 }

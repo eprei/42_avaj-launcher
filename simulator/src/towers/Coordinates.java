@@ -1,5 +1,9 @@
 package towers;
 
+import exceptions.NegativeHeightException;
+import exceptions.NegativeLatitudeException;
+import exceptions.NegativeLongitudeException;
+
 public class Coordinates {
     private int longitude;
     private int latitude;
@@ -8,7 +12,23 @@ public class Coordinates {
     public Coordinates(int p_longitude, int p_latitude, int p_height) {
         this.longitude = p_longitude;
         this.latitude = p_latitude;
-        this.height = p_height;
+        int HEIGHT_LIMIT = 100;
+        this.height = Math.min(p_height, HEIGHT_LIMIT);
+        // TODO continue here
+        System.out.printf("--> p_height: %d --- ", p_height);
+        System.out.printf("this.height: %d\n", this.height);
+    }
+
+    public static void validateCoordinates(int longitude, int latitude, int height) throws Exception {
+        if (longitude < 0) {
+            throw new NegativeLongitudeException(longitude);
+        }
+        if (latitude < 0) {
+            throw new NegativeLatitudeException(latitude);
+        }
+        if (height < 0) {
+            throw new NegativeHeightException(height);
+        }
     }
 
     public int getLongitude() {

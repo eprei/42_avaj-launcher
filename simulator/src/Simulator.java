@@ -1,42 +1,33 @@
-import aircrafts.AircraftFactory;
-import aircrafts.AircraftTypes;
 import aircrafts.Flyable;
-import logger.Log;
-import towers.Coordinates;
+import exceptions.SimulatorException;
+import io.FileManager;
 import towers.WeatherTower;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Simulator {
-    // TODO continue here
-    private final List<Flyable> listOfFlyables = new ArrayList<>();
+    private static List<Flyable> LIST_OF_FLYABLE = new ArrayList<>();
+    private static int NUMBER_OF_SIMULATIONS = 0;
 
     public static void main(String[] args) {
-        simulate();
-        Log.saveLogToFile();
+        try {
+            FileManager.openFile(args);
+            NUMBER_OF_SIMULATIONS = FileManager.getNumberOfSimulations();
+            LIST_OF_FLYABLE = FileManager.getListOfFlyable();
+            simulate();
+            FileManager.saveLogToFile();
+        } catch (SimulatorException e) {
+            System.out.printf(e.getInfo());
+        } catch (Exception e) {
+            System.out.printf("Error: %s", e);
+        }
     }
 
     private static void simulate() {
         WeatherTower weatherTower = new WeatherTower();
-        Flyable jetPlane = AircraftFactory.getInstance().newAircraft(AircraftTypes.JETPLANE, "Airbus", new Coordinates(60, 60, 60));
-        Flyable helicopter = AircraftFactory.getInstance().newAircraft(AircraftTypes.HELICOPTER, "Apache", new Coordinates(70, 70, 70));
-        Flyable balloon = AircraftFactory.getInstance().newAircraft(AircraftTypes.BALLOON, "Aerostatico", new Coordinates(30, 30, 30));
-        jetPlane.registerTower(weatherTower);
-        helicopter.registerTower(weatherTower);
-        balloon.registerTower(weatherTower);
-        for (int i = 1; i <= 5; i++) {
-            System.out.printf("___________   ITERATION %d   _____________\n", i);
-            weatherTower.changeWeather();
-//            wait(1000);
-        }
-    }
 
-    private static void wait(int ms) {
-        try {
-            Thread.sleep(ms);
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
+        LIST_OF_FLYABLE.forEach(flyable -> flyable.registerTower(weatherTower));
+        weatherTower.changeWeather(NUMBER_OF_SIMULATIONS);
     }
 }
