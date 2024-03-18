@@ -14,17 +14,16 @@ public class Balloon extends Aircraft {
         if (this.isLanded) {
             return;
         }
-        System.out.printf("%s recived signal from %s -> updating conditions...\n", this.NAME, weatherTower.getName());
-        String weather = this.weatherTower.getWeather(this.coordinates);
-        System.out.printf("%s has get the new weather at %d %d %d: %s\n", this.NAME, coordinates.getLongitude(),
-                coordinates.getLatitude(), coordinates.getHeight(), weather);
-        switch (weather) {
-            case Weather.SUN -> coordinates.updateCoordinates(2, 0, 4);
-            case Weather.RAIN -> coordinates.updateCoordinates(0, 0, -5);
-            case Weather.FOG -> coordinates.updateCoordinates(0, 0, -3);
-            case Weather.SNOW -> coordinates.updateCoordinates(0, 0, -15);
+        if (this.coordinates.getHeight() != 0) {
+            String weather = this.weatherTower.getWeather(this.coordinates);
+            switch (weather) {
+                case Weather.SUN -> coordinates.updateCoordinates(2, 0, 4);
+                case Weather.RAIN -> coordinates.updateCoordinates(0, 0, -5);
+                case Weather.FOG -> coordinates.updateCoordinates(0, 0, -3);
+                case Weather.SNOW -> coordinates.updateCoordinates(0, 0, -15);
+            }
+            logMessage(AircraftTypes.BALLOON, NAME, ID, Messages.balloon.get(weather));
         }
-        logMessage(AircraftTypes.BALLOON, NAME, ID, Messages.balloon.get(weather));
         hasTheAircraftLanded(TYPE);
     }
 }

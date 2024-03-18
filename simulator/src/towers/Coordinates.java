@@ -14,9 +14,6 @@ public class Coordinates {
         this.latitude = p_latitude;
         int HEIGHT_LIMIT = 100;
         this.height = Math.min(p_height, HEIGHT_LIMIT);
-        // TODO continue here
-        System.out.printf("--> p_height: %d --- ", p_height);
-        System.out.printf("this.height: %d\n", this.height);
     }
 
     public static void validateCoordinates(int longitude, int latitude, int height) throws Exception {
@@ -31,14 +28,6 @@ public class Coordinates {
         }
     }
 
-    public int getLongitude() {
-        return longitude;
-    }
-
-    public int getLatitude() {
-        return latitude;
-    }
-
     public int getHeight() {
         return height;
     }
@@ -47,11 +36,11 @@ public class Coordinates {
         if (height == 0) {
             return;
         }
-        System.out.printf("old coordinates: %d %d %d\n", longitude, latitude, height);
+//        Log.info(String.format("old coordinates: lon %d lat %d hei %d", longitude, latitude, height));
         updateLongitude(longitudeVariation);
         updateLatitude(latitudeVariation);
         updateHeight(heightVariation);
-        System.out.printf("new coordinates: %d %d %d\n", longitude, latitude, height);
+//        Log.info(String.format("new coordinates: lon %d lat %d hei %d", longitude, latitude, height));
     }
 
     private void updateLongitude(int variation) {

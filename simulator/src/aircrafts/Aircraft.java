@@ -15,9 +15,9 @@ public class Aircraft extends Flyable {
         this.NAME = p_name;
         this.coordinates = p_coordinates;
         TYPE = type;
-//        this.isLanded = p_coordinates.getHeight() == 0;
-        hasTheAircraftLanded(type);
+        this.isLanded = false;
     }
+
 
     protected void logMessage(String type, String name, long id, String message) {
         String messageFormatted = String.format("%s#%s(%d): %s", type, name, id, message);

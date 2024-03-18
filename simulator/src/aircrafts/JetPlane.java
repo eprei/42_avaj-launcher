@@ -14,17 +14,16 @@ public class JetPlane extends Aircraft {
         if (this.isLanded) {
             return;
         }
-        System.out.printf("%s recived signal from %s -> updating conditions...\n", this.NAME, weatherTower.getName());
-        String weather = this.weatherTower.getWeather(this.coordinates);
-        System.out.printf("%s has get the new weather at %d %d %d: %s\n", this.NAME, coordinates.getLongitude(),
-                coordinates.getLatitude(), coordinates.getHeight(), weather);
-        switch (weather) {
-            case Weather.SUN -> coordinates.updateCoordinates(0, 10, 2);
-            case Weather.RAIN -> coordinates.updateCoordinates(0, 5, 0);
-            case Weather.FOG -> coordinates.updateCoordinates(0, 1, 0);
-            case Weather.SNOW -> coordinates.updateCoordinates(0, 0, -7);
+        if (this.coordinates.getHeight() != 0) {
+            String weather = this.weatherTower.getWeather(this.coordinates);
+            switch (weather) {
+                case Weather.SUN -> coordinates.updateCoordinates(0, 10, 2);
+                case Weather.RAIN -> coordinates.updateCoordinates(0, 5, 0);
+                case Weather.FOG -> coordinates.updateCoordinates(0, 1, 0);
+                case Weather.SNOW -> coordinates.updateCoordinates(0, 0, -7);
+            }
+            logMessage(AircraftTypes.JETPLANE, NAME, ID, Messages.jetPlane.get(weather));
         }
-        logMessage(AircraftTypes.JETPLANE, NAME, ID, Messages.jetPlane.get(weather));
         hasTheAircraftLanded(TYPE);
     }
 }

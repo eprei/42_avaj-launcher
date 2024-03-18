@@ -15,9 +15,8 @@ public class WeatherTower extends Tower {
     }
 
     public void changeWeather(int numberOfTimes) {
-        for (int i = 0; i <= numberOfTimes; i++) {
-            System.out.printf("___________   ITERATION %d   _____________\n", i);
-            System.out.println("WeatherTower changeWeather()");
+        for (int i = 1; i <= numberOfTimes; i++) {
+//            Log.info(String.format("___________   ITERATION %d   _____________", i));
             WeatherProvider.changeWeather();
             conditionChanged();
         }
