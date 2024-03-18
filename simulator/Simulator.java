@@ -1,3 +1,5 @@
+package simulator;
+
 import aircrafts.Flyable;
 import exceptions.SimulatorException;
 import io.FileManager;
