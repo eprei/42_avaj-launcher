@@ -21,13 +21,13 @@ public class Coordinates {
 
     public static void validateCoordinates(int longitude, int latitude, int height) throws Exception {
         if (longitude < 0) {
-            throw new NegativeLongitudeException(longitude);
+            throw new NegativeLongitudeException(String.valueOf(longitude));
         }
         if (latitude < 0) {
-            throw new NegativeLatitudeException(latitude);
+            throw new NegativeLatitudeException(String.valueOf(latitude));
         }
         if (height < 0) {
-            throw new NegativeHeightException(height);
+            throw new NegativeHeightException(String.valueOf(height));
         }
     }
 

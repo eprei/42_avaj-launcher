@@ -1,10 +1,10 @@
 package exceptions;
 
 public class SimulatorException extends Exception {
-    private final int value;
-    private final String name;
+    protected final String value;
+    protected final String name;
 
-    public SimulatorException(String name, int value) {
+    public SimulatorException(String name, String value) {
         this.name = name;
         this.value = value;
     }

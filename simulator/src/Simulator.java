@@ -11,8 +11,13 @@ public class Simulator {
     private static int NUMBER_OF_SIMULATIONS = 0;
 
     public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.print("Error: incorrect number of arguments\n");
+            System.out.print("Usage: java avaj-launcher.simulator.Simulator SCENARIO_FILE.txt");
+            return;
+        }
         try {
-            FileManager.openFile(args);
+            FileManager.openFile(args[0]);
             NUMBER_OF_SIMULATIONS = FileManager.getNumberOfSimulations();
             LIST_OF_FLYABLE = FileManager.getListOfFlyable();
             simulate();

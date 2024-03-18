@@ -2,7 +2,7 @@ package exceptions;
 
 public class NegativeHeightException extends SimulatorException {
 
-    public NegativeHeightException(int value) {
+    public NegativeHeightException(String value) {
         super("NegativeHeightException", value);
     }
 }

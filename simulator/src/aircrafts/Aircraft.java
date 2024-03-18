@@ -15,11 +15,11 @@ public class Aircraft extends Flyable {
         this.NAME = p_name;
         this.coordinates = p_coordinates;
         TYPE = type;
-        this.isLanded = false;
+//        this.isLanded = p_coordinates.getHeight() == 0;
+        hasTheAircraftLanded(type);
     }
 
     protected void logMessage(String type, String name, long id, String message) {
-//        System.out.printf("%s#%s(%d): %s\n", type, name, id, message);
         String messageFormatted = String.format("%s#%s(%d): %s", type, name, id, message);
         Log.info(messageFormatted);
     }
@@ -45,7 +45,9 @@ public class Aircraft extends Flyable {
         if (coordinates.getHeight() == 0) {
             isLanded = true;
             logMessage(type, NAME, ID, "landing.");
-            weatherTower.unregister(this);
+            if (weatherTower != null) {
+                weatherTower.unregister(this);
+            }
         }
     }
 }

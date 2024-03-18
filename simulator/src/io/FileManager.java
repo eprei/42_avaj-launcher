@@ -1,7 +1,11 @@
 package io;
 
 import aircrafts.AircraftFactory;
+import aircrafts.AircraftTypes;
 import aircrafts.Flyable;
+import exceptions.InvalidAircraftLineFormatException;
+import exceptions.InvalidAircraftTypeException;
+import exceptions.InvalidNumberOfSimulationsFormatException;
 import towers.Coordinates;
 
 import java.io.BufferedReader;
@@ -14,17 +18,25 @@ public class FileManager {
     private static final AircraftFactory aircraftFactory = AircraftFactory.getInstance();
     private static int NUMBER_OF_SIMULATIONS = 0;
 
-    public static void openFile(String[] args) throws Exception {
-        String path = args[0];
+    public static void openFile(String path) throws Exception {
 
         try (FileReader fileReader = new FileReader(path);
              BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             String line;
+
             NUMBER_OF_SIMULATIONS = Integer.parseInt(bufferedReader.readLine());
-            // TODO throw exception if NUMBER_OF_SIMULATIONS != int or NUMBER_OF_SIMULATIONS < 1
+            if (NUMBER_OF_SIMULATIONS < 0) {
+                throw new InvalidNumberOfSimulationsFormatException(
+                        String.format("For input string: \"%s\"", NUMBER_OF_SIMULATIONS));
+            }
             while ((line = bufferedReader.readLine()) != null) {
+                if (line.isEmpty()) {
+                    continue;
+                }
                 parseLine(line);
             }
+        } catch (NumberFormatException e) {
+            throw new InvalidNumberOfSimulationsFormatException(e.getMessage());
         }
     }
 
@@ -32,21 +44,24 @@ public class FileManager {
         String[] parts = line.split(" ");
 
         if (parts.length != 5) {
-            // TODO throw exception
-            return;
+            throw new InvalidAircraftLineFormatException(line);
         }
-
         String type = parts[0];
-        // TODO throw exception if type not in AircfraftTypes
+        if (!AircraftTypes.isAValidTypeOfAircraft(type)) {
+            throw new InvalidAircraftTypeException(line);
+        }
         String name = parts[1];
-        int longitude = Integer.parseInt(parts[2]);
-        int latitude = Integer.parseInt(parts[3]);
-        int height = Integer.parseInt(parts[4]);
+        try {
+            int longitude = Integer.parseInt(parts[2]);
+            int latitude = Integer.parseInt(parts[3]);
+            int height = Integer.parseInt(parts[4]);
 
-        Coordinates.validateCoordinates(longitude, latitude, height);
-
-        Flyable flyable = aircraftFactory.newAircraft(type, name, new Coordinates(longitude, latitude, height));
-        LIST_OF_FLYABLE.add(flyable);
+            Coordinates.validateCoordinates(longitude, latitude, height);
+            Flyable flyable = aircraftFactory.newAircraft(type, name, new Coordinates(longitude, latitude, height));
+            LIST_OF_FLYABLE.add(flyable);
+        } catch (NumberFormatException e) {
+            throw new InvalidAircraftLineFormatException(line);
+        }
     }
 
     public static int getNumberOfSimulations() {
