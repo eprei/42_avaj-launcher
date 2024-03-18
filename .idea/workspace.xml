@@ -7,8 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61bc8b77-07a5-4d9a-9e84-ef155ed8b62c" name="Changes" comment="simulator working correctly">
+    <list default="true" id="61bc8b77-07a5-4d9a-9e84-ef155ed8b62c" name="Changes" comment="refactor folders">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/avaj-launcher.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/avaj-launcher.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_subject/scenario.txt" beforeDir="false" afterPath="$PROJECT_DIR$/01_subject/scenario.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircrafts/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircrafts/Aircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/towers/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/towers/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather/WeatherProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/weather/WeatherProvider.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +100,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/simulator/src/simulator" />
       <recent name="$PROJECT_DIR$/com.simulator.aircrafts/src" />
       <recent name="$PROJECT_DIR$/com.simulator.aircrafts" />
@@ -108,7 +116,7 @@
   <component name="RunManager" selected="Application.Simulator">
     <configuration name="Simulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Simulator" />
-      <module name="simulator" />
+      <module name="avaj-launcher" />
       <option name="PROGRAM_PARAMETERS" value="01_subject/scenario.txt" />
       <extension name="coverage">
         <pattern>
@@ -209,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710768269430</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refactor folders">
+      <option name="closed" value="true" />
+      <created>1710773863801</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710773863801</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +245,7 @@
     <MESSAGE value="Add logger" />
     <MESSAGE value="Add exceptions" />
     <MESSAGE value="simulator working correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="simulator working correctly" />
+    <MESSAGE value="refactor folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor folders" />
   </component>
 </project>

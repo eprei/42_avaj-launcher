@@ -26,7 +26,6 @@ public class Aircraft extends Flyable {
 
     @Override
     public void updateConditions() {
-        //TODO solve this methode
     }
 
     public String getName() {
