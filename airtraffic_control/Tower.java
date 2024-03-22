@@ -1,9 +1,7 @@
-package towers;
+package airtraffic_control;
 
-import aircrafts.Aircraft;
-import aircrafts.Flyable;
-import io.Log;
-import io.Messages;
+import log.Log;
+import log.Messages;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +28,7 @@ public class Tower {
         Aircraft aircraft = (Aircraft) p_flyable;
         TO_UNREGISTER.add(p_flyable);
         Log.info(String.format("Tower says: %s#%s(%d) %s %s.", aircraft.getType(),
-                aircraft.getName(), aircraft.getId(), io.Messages.UNREGISTERED, this.NAME));
+                aircraft.getName(), aircraft.getId(), log.Messages.UNREGISTERED, this.NAME));
     }
 
     protected void conditionChanged() {

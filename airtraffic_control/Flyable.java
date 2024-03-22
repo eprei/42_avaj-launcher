@@ -1,6 +1,4 @@
-package aircrafts;
-
-import towers.WeatherTower;
+package airtraffic_control;
 
 public abstract class Flyable {
     protected WeatherTower weatherTower;

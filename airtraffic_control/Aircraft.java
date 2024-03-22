@@ -1,7 +1,6 @@
-package aircrafts;
+package airtraffic_control;
 
-import io.Log;
-import towers.Coordinates;
+import log.Log;
 
 public class Aircraft extends Flyable {
     protected final long ID;

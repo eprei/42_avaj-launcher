@@ -1,9 +1,9 @@
 package simulator;
 
-import aircrafts.Flyable;
+import airtraffic_control.FileManager;
+import airtraffic_control.Flyable;
+import airtraffic_control.WeatherTower;
 import exceptions.SimulatorException;
-import io.FileManager;
-import towers.WeatherTower;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +35,9 @@ public class Simulator {
         WeatherTower weatherTower = new WeatherTower();
 
         LIST_OF_FLYABLE.forEach(flyable -> flyable.registerTower(weatherTower));
-        weatherTower.changeWeather(NUMBER_OF_SIMULATIONS);
+        for (int i = 1; i <= NUMBER_OF_SIMULATIONS; i++) {
+//            Log.info(String.format("___________   ITERATION %d   _____________", i));
+            weatherTower.changeWeather();
+        }
     }
 }

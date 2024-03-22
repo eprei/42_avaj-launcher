@@ -7,8 +7,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61bc8b77-07a5-4d9a-9e84-ef155ed8b62c" name="Changes" comment="random weather">
-      <change beforePath="$PROJECT_DIR$/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/Simulator.java" afterDir="false" />
+    <list default="true" id="61bc8b77-07a5-4d9a-9e84-ef155ed8b62c" name="Changes" comment="conforming classes to the subject">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircrafts/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/Aircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircrafts/AircraftFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/AircraftFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircrafts/AircraftTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/AircraftTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircrafts/Balloon.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/Balloon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircrafts/Flyable.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/Flyable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircrafts/Helicopter.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/Helicopter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircrafts/JetPlane.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/JetPlane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exceptions/InvalidAircraftTypeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/exceptions/InvalidAircraftTypeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/io/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/io/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/log/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/io/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/log/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/Simulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/towers/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/towers/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/Tower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/towers/WeatherTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/airtraffic_control/WeatherTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather/WeatherProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/weather/WeatherProvider.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,26 +83,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Simulator.executor&quot;: &quot;Run&quot;,
-    &quot;Application.simulator.src.Simulator.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/epresa-c/avaj-launcher&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Simulator.executor": "Run",
+    "Application.simulator.src.Simulator.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "20",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/epresa-c/avaj-launcher",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="exceptions" />
@@ -161,6 +185,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710181906189</updated>
+      <workItem from="1711105303575" duration="1230000" />
+      <workItem from="1711110545454" duration="3269000" />
     </task>
     <task id="LOCAL-00001" summary="All aircraft working">
       <option name="closed" value="true" />
@@ -229,6 +255,9 @@
     <option name="localTasksCounter" value="9" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -248,6 +277,7 @@
     <MESSAGE value="simulator working correctly" />
     <MESSAGE value="refactor folders" />
     <MESSAGE value="random weather" />
-    <option name="LAST_COMMIT_MESSAGE" value="random weather" />
+    <MESSAGE value="conforming classes to the subject" />
+    <option name="LAST_COMMIT_MESSAGE" value="conforming classes to the subject" />
   </component>
 </project>

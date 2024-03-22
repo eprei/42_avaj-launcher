@@ -1,4 +1,4 @@
-package aircrafts;
+package airtraffic_control;
 
 import java.util.Objects;
 

@@ -1,12 +1,9 @@
-package io;
+package airtraffic_control;
 
-import aircrafts.AircraftFactory;
-import aircrafts.AircraftTypes;
-import aircrafts.Flyable;
 import exceptions.InvalidAircraftLineFormatException;
 import exceptions.InvalidAircraftTypeException;
 import exceptions.InvalidNumberOfSimulationsFormatException;
-import towers.Coordinates;
+import log.Log;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

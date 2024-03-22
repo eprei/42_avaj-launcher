@@ -1,7 +1,6 @@
-package aircrafts;
+package airtraffic_control;
 
-import io.Messages;
-import towers.Coordinates;
+import log.Messages;
 import weather.Weather;
 
 public class JetPlane extends Aircraft {

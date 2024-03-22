@@ -1,4 +1,4 @@
-package towers;
+package airtraffic_control;
 
 import weather.WeatherProvider;
 
@@ -14,11 +14,8 @@ public class WeatherTower extends Tower {
         return this.weatherProvider.getCurrentWeather(p_coordinates);
     }
 
-    public void changeWeather(int numberOfTimes) {
-        for (int i = 1; i <= numberOfTimes; i++) {
-//            Log.info(String.format("___________   ITERATION %d   _____________", i));
-            WeatherProvider.changeWeather();
-            conditionChanged();
-        }
+    public void changeWeather() {
+        WeatherProvider.changeWeather();
+        conditionChanged();
     }
 }

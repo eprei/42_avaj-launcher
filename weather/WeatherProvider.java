@@ -1,6 +1,6 @@
 package weather;
 
-import towers.Coordinates;
+import airtraffic_control.Coordinates;
 
 public class WeatherProvider {
     private static final String[] weather = {

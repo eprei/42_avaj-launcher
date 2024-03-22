@@ -1,15 +1,16 @@
-package towers;
+package airtraffic_control;
 
 import exceptions.NegativeHeightException;
 import exceptions.NegativeLatitudeException;
 import exceptions.NegativeLongitudeException;
+import log.Log;
 
 public class Coordinates {
     private int longitude;
     private int latitude;
     private int height;
 
-    public Coordinates(int p_longitude, int p_latitude, int p_height) {
+    Coordinates(int p_longitude, int p_latitude, int p_height) {
         this.longitude = p_longitude;
         this.latitude = p_latitude;
         int HEIGHT_LIMIT = 100;
@@ -44,11 +45,11 @@ public class Coordinates {
         if (height == 0) {
             return;
         }
-//        Log.info(String.format("old coordinates: lon %d lat %d hei %d", longitude, latitude, height));
+        Log.info(String.format("old coordinates: lon %d lat %d hei %d", longitude, latitude, height));
         updateLongitude(longitudeVariation);
         updateLatitude(latitudeVariation);
         updateHeight(heightVariation);
-//        Log.info(String.format("new coordinates: lon %d lat %d hei %d", longitude, latitude, height));
+        Log.info(String.format("new coordinates: lon %d lat %d hei %d", longitude, latitude, height));
     }
 
     private void updateLongitude(int variation) {

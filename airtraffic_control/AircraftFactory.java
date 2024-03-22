@@ -1,6 +1,4 @@
-package aircrafts;
-
-import towers.Coordinates;
+package airtraffic_control;
 
 public class AircraftFactory {
     private static int uid = 1;
@@ -21,7 +19,6 @@ public class AircraftFactory {
             case AircraftTypes.HELICOPTER -> new Helicopter(uid++, p_name, p_coordinates);
             case AircraftTypes.JETPLANE -> new JetPlane(uid++, p_name, p_coordinates);
             case AircraftTypes.BALLOON -> new Balloon(uid++, p_name, p_coordinates);
-//            TODO HANDLE NULL POINTER EXCEPTION
             default -> null;
         };
     }

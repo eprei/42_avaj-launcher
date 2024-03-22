@@ -1,6 +1,6 @@
 package exceptions;
 
-import aircrafts.AircraftTypes;
+import airtraffic_control.AircraftTypes;
 
 public class InvalidAircraftTypeException extends SimulatorException {
     public InvalidAircraftTypeException(String value) {
