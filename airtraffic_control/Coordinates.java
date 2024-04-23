@@ -45,11 +45,11 @@ public class Coordinates {
         if (height == 0) {
             return;
         }
-        Log.info(String.format("old coordinates: lon %d lat %d hei %d", longitude, latitude, height));
+//        Log.info(String.format("old coordinates: lon %d lat %d hei %d", longitude, latitude, height));
         updateLongitude(longitudeVariation);
         updateLatitude(latitudeVariation);
         updateHeight(heightVariation);
-        Log.info(String.format("new coordinates: lon %d lat %d hei %d", longitude, latitude, height));
+//        Log.info(String.format("new coordinates: lon %d lat %d hei %d", longitude, latitude, height));
     }
 
     private void updateLongitude(int variation) {
