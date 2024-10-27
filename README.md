@@ -1,55 +1,104 @@
-# Avaj Launcher
+# Avaj-Launcher 🛩️
 
-## Java Aircraft Simulation Project
+![Java](https://img.shields.io/badge/Java-21-blue)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-This project is an introduction to the Java world at 42, focusing on Object-Oriented Programming and UML class diagrams.
+A Java-based aircraft simulation program implementing the Observer and Singleton design patterns. This project serves as an introduction to Java development at 42 school, focusing on Object-Oriented Programming principles and UML class diagram implementation.
 
-### Project Overview
+## Overview
 
-Implement a minimal aircraft simulation program based on a given UML class diagram. The simulation involves different types of aircraft that react to various weather conditions.
+The Avaj-Launcher simulates aircraft behavior under different weather conditions at Frankfurt airport. The program reads scenario files containing aircraft specifications and simulates their behavior based on weather changes, implementing various design patterns and following a strict UML class structure.
 
-### Key Components
+## Features
 
-- UML Class Diagram implementation
-- Weather generation
-- Aircraft behavior simulation
+- Weather-based aircraft behavior simulation
+- Implementation of Observer, Singleton, and Factory design patterns
+- Custom exception handling
 - Scenario file parsing
+- Weather generation system
+- Aircraft registration/unregistration system
+- Logging system with file output
 
-### Requirements
-
-- Java (compliant with latest LTS version)
-- No external libraries, build tools, or code generators allowed
-- Must follow Java package naming conventions
-
-### Building the Project
-
-Compile the project using the following commands in the root of your project folder:
+## Project Structure
 
 ```
+├── airtraffic_control/     # Core aircraft and control systems
+├── exceptions/             # Custom exception handling
+├── log/                    # Logging functionality
+├── simulator/              # Main simulation logic
+└── weather/               # Weather generation system
+```
+
+## Requirements
+
+- Java 21 or higher
+- No external libraries or build tools
+- Clean code structure following Java naming conventions
+
+## Building and Running
+
+1. Compile the project:
+```bash
 find * -name "*.java" > sources.txt
 javac @sources.txt
 ```
 
-### Running the Simulation
-
+2. Run the simulation:
+```bash
+java simulator.Simulator scenario.txt
 ```
-java com.yourpackage.avaj.Simulator scenario.txt
+
+## Input File Format
+
+The scenario file should follow this structure:
 ```
-
-Replace `com.yourpackage` with your actual package structure.
-
-### Scenario File
-
-The first line contains the number of times the simulation is run. Each subsequent line describes an aircraft in the format:
-
-```
+25              # Number of simulation cycles
 TYPE NAME LONGITUDE LATITUDE HEIGHT
 ```
 
-### Output
+Example:
+```
+25
+Balloon B1 2 3 20
+JetPlane J1 23 44 32
+Helicopter H1 654 33 20
+```
 
-The simulation generates a file named `simulation.txt` that describes the outcome of the simulation.
+## Aircraft Types and Behavior
 
-### Note
+The simulation includes three types of aircraft:
+- **Helicopter**: Sensitive to all weather conditions
+- **JetPlane**: Primarily affected by latitude changes
+- **Balloon**: Highly sensitive to height changes
 
-This project is designed to teach the basics of Java programming, UML interpretation, and object-oriented design patterns. It's not intended for real-world aircraft simulation.
+Each aircraft type responds differently to four weather conditions:
+- SUN
+- RAIN
+- FOG
+- SNOW
+
+## Key Learning Objectives
+
+- Object-Oriented Programming in Java
+- UML class diagram implementation
+- Design patterns (Observer, Singleton, Factory)
+- Custom exception handling
+- File I/O operations
+- Clean code principles
+
+## Implementation Details
+
+- Custom exceptions for robust error handling
+- Coordinate system with validation
+- Weather generation based on coordinates
+- Logging system with file output
+- Factory pattern for aircraft creation
+- Observer pattern for weather updates
+
+## Output
+
+The simulation generates a `simulation.txt` file containing detailed logs of:
+- Aircraft registration/unregistration
+- Weather condition changes
+- Aircraft movements and status updates
+- Landing events
